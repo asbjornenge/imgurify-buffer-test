@@ -12,6 +12,7 @@ module.exports = function(file) {
   return through(
     function(buf, enc, cb) { 
       buffers.push(buf); 
+      console.error(buf.length)
       cb() 
     },
     function(end) {
